@@ -1,5 +1,7 @@
 # Automatic Randomised MAC for Linux
 
+Project created to enhance privacy of desktop linux by randomising the MAC address everytime the system is booted.
+
 ### Requirements
 1. [macchanger](http://www.gnu.org/software/macchanger)
 
