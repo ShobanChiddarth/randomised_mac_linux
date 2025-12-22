@@ -1,6 +1,8 @@
 #!/bin/bash
 
-for interface in $(./get_interfaces.sh); do
+interfaces=$(ip -o link show | awk '$2 != "lo:" && $17 ~ /^([0-9a-f]{2}:){5}[0-9a-f]{2}$/ {sub(":", "", $2); print $2}')
+
+for interface in $interfaces; do
     ip link set "$interface" down
     macchanger -r "$interface"
     ip link set "$interface" up
