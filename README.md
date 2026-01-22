@@ -59,7 +59,7 @@ Project created to enhance privacy of desktop linux by randomising the MAC addre
 8. Start the systemd service right now to check if the MAC addresses are actually being changed
    
    ```sh
-   sudo systemctl start randomise_MAC
+   sudo systemctl start randomise_MACs
    ```
 
 9. Run `ifconfig` again and compare the output with the previous run
